@@ -7,8 +7,11 @@
             header{
                 height:100%;
                 width:100%;
-                background-image:linear-gradient(rgba(0,0,0.8),rgba(0,0,0.2));
-                background-image:  url("books.jpg");
+                background-image: linear-gradient(rgba(0,0,0,1) 10%, rgba(0,0,0,0.68), rgba(0,0,0,0.0) 80%), url("books.jpg");;
+
+
+                
+                
                 background-size:cover;
                 font-family:sans-serif;
 
@@ -91,6 +94,50 @@
                 background:transparent;
                 border:1px solid indianred;
             }
+            #img1{
+                height:100%;
+                width:100%;
+                z-index:-1;
+                
+            }
+            .data{
+                font-size:xx-large;
+                
+                transform:translateY(300px);
+                padding-top:20px;
+                letter-spacing:1.5px;
+                padding-left:100px;
+                color: white;
+                background-color: none;
+                font-family:sans-serif;
+                
+            }
+            .image1{
+                
+                max-height: auto;
+                
+                height:100%;
+                width:100%;
+                background-image: url("bookk.jpg");
+                background-size: cover;
+            }
+            #slider{
+                position: absolute;
+               
+                bottom:-650px;
+                right:30px;
+            }
+            @keyframes theSlide{
+                0%{
+                    transform:translateX(500px);
+                }
+                100%{
+                    transform:translateX(0px);
+                }
+            }
+
+
+
         </style>
         </head>
         <body>
@@ -111,12 +158,26 @@
                     </div> 
                 </nav>
                 <section class="h-txt">
-                    <span>Enjoy</span>
+                    <span>Explore Endless Possibilities</span>
                     <h1>Unlock your potential!</h1>
                     <br>
                     <a href="#">Let's get started</a>
+
                 </section>
             </header>
+            <div class="image1">
+                
+                <h2 class="data">- Track individual child's progress</h2>
+                <h2 class="data">- Class report with detailed insights</h2>
+                <h2 class="data">- Better teaching methods and technique</h2>
+                <h2 class="data">- Practice papers and mock questions</h2>
+                <img src="children.png" id="slider">
+            </div>
+            <script>
+                window.addEventListener('scroll',() =>{
+                    document.getElementById('slider').style.animation='theSlide 3s ease-in';
+                });
+            </script>
         </body>
     </html>
 </DOCTYPE>
